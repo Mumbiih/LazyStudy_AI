@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LazyStudy AI — Bring Your Notes Back to Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span> LazyStudy <span class="ai">AI</span></a>
+    <span class="tagline">Your notes, revived.</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">THE GHOST IN YOUR NOTES 👻</p>
+      <h1>Forgot what you studied?<br><span>Bring it back to life.</span></h1>
+      <p class="intro">Paste your lecture notes and turn them into a quick summary or revision questions. No more staring at a mountain of notes.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="step">STEP 01</p>
+            <h2>Your forgotten notes</h2>
+          </div>
+          <button id="sampleBtn" class="text-button" type="button">Try sample notes</button>
+        </div>
+        <label for="notes">Paste your notes here</label>
+        <textarea id="notes" placeholder="Paste your lecture notes here...&#10;&#10;Tip: include definitions, key ideas, and examples." maxlength="12000"></textarea>
+        <div class="input-footer">
+          <span id="charCount">0 / 12,000 characters</span>
+          <span>Keep private information out of your notes.</span>
+        </div>
+        <label for="fileInput">Or upload a document (.pdf, .docx, .txt, .md)</label>
+        <input type="file" id="fileInput" accept=".pdf,.docx,.txt,.md">
+        <div class="actions">
+          <button id="summarizeBtn" class="primary" type="button">✦ Revive summary</button>
+          <button id="questionsBtn" class="secondary" type="button">☾ Create questions</button>
+          <button id="clearBtn" class="text-button" type="button">Clear</button>
+        </div>
+        <p class="notice">Starter version: buttons use a local demo so you can test the interface. AI integration comes in the next step.</p>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="step">STEP 02</p>
+            <h2>Your revived study guide</h2>
+          </div>
+          <span class="status"><span></span> Ready</span>
+        </div>
+        <div id="output" class="output" aria-live="polite">
+          <div class="empty-icon">✧</div>
+          <h3>Your study guide will appear here</h3>
+          <p>Add your notes, then choose summary or questions. Your revision session starts here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div><span class="feature-icon">📜</span><h3>Resurrect</h3><p>Bring old lecture notes back into focus.</p></div>
+      <div><span class="feature-icon">🧠</span><h3>Understand</h3><p>Turn long content into key ideas.</p></div>
+      <div><span class="feature-icon">📝</span><h3>Practise</h3><p>Use questions to check what you remember.</p></div>
+    </section>
+
+    <footer>Built as an open-source learning project · LazyStudy AI</footer>
+  </main>
+  <!-- libraries that read PDF and Word files in the browser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

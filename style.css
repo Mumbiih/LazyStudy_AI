@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #202039;
+  --muted: #72728b;
+  --purple: #6b4eff;
+  --purple-dark: #5338df;
+  --lavender: #f1edff;
+  --border: #e9e6f3;
+  --surface: #ffffff;
+  --bg: #faf9ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top right, #f0eaff 0, transparent 34%), var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+.topbar {
+  height: 76px; padding: 0 7%; display: flex; align-items: center;
+  justify-content: space-between; border-bottom: 1px solid #ece8f7;
+  background: rgba(255,255,255,.78);
+}
+.brand { color: var(--ink); text-decoration: none; font-family: Manrope, sans-serif; font-weight: 800; font-size: 21px; letter-spacing: -.6px; }
+.brand-icon { color: var(--purple); margin-right: 5px; }
+.ai { color: var(--purple); }
+.tagline { color: var(--muted); font-size: 13px; }
+.container { width: min(1120px, 90%); margin: 0 auto; }
+.hero { text-align: center; padding: 54px 0 35px; }
+.eyebrow { color: var(--purple); font-weight: 700; font-size: 11px; letter-spacing: 1.8px; }
+h1 { font: 800 clamp(32px, 5vw, 49px)/1.15 Manrope, sans-serif; letter-spacing: -1.7px; margin: 15px 0; }
+h1 span { color: var(--purple); }
+.intro { max-width: 620px; margin: 0 auto; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 25px; box-shadow: 0 12px 35px rgba(52, 36, 106, .045); min-width: 0; }
+.panel-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 22px; }
+.step { color: var(--purple); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; margin: 0 0 6px; }
+h2 { font: 700 19px Manrope, sans-serif; margin: 0; letter-spacing: -.4px; }
+.text-button { border: 0; background: transparent; color: var(--purple); font: 600 12px 'DM Sans', sans-serif; cursor: pointer; padding: 8px 0; }
+label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 9px; }
+textarea { width: 100%; height: 230px; resize: vertical; border: 1px solid var(--border); border-radius: 12px; padding: 14px; outline: none; font: 13px/1.65 'DM Sans', sans-serif; color: var(--ink); background: #fdfcff; }
+textarea:focus { border-color: #a99aff; box-shadow: 0 0 0 3px #eee9ff; }
+.input-footer { display: flex; justify-content: space-between; gap: 10px; color: #9693a8; font-size: 10px; margin: 8px 0 18px; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+button.primary, button.secondary { border-radius: 10px; padding: 12px 15px; font: 700 12px 'DM Sans', sans-serif; cursor: pointer; transition: transform .15s, background .15s; }
+button.primary { background: var(--purple); color: white; border: 1px solid var(--purple); }
+button.primary:hover { background: var(--purple-dark); transform: translateY(-1px); }
+button.secondary { background: white; color: var(--purple); border: 1px solid #dcd4ff; }
+button.secondary:hover { background: var(--lavender); }
+.notice { color: #8b879d; font-size: 10px; line-height: 1.5; margin: 14px 0 0; }
+.status { color: #6d6b80; background: #f7f5ff; border-radius: 30px; padding: 7px 10px; font-size: 10px; white-space: nowrap; }
+.status span { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #8e79ff; margin-right: 5px; vertical-align: middle; }
+.output { min-height: 330px; background: #fcfbff; border: 1px dashed #e4def8; border-radius: 13px; padding: 22px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.output.empty { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.empty-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--lavender); color: var(--purple); font-size: 27px; margin-bottom: 12px; }
+.output h3 { color: var(--ink); font: 700 15px Manrope, sans-serif; margin: 6px 0; }
+.output p { margin: 6px 0; }
+.output ul, .output ol { padding-left: 20px; }
+.output li { margin-bottom: 8px; }
+.answer-box { display: block; width: 100%; margin: 8px 0 2px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font: 13px 'DM Sans', sans-serif; outline: none; }
+.answer-box:focus { border-color: #a99aff; box-shadow: 0 0 0 3px #eee9ff; }
+input[type="file"] { font: 12px 'DM Sans', sans-serif; margin-bottom: 16px; }
+.answer { color: var(--purple); font-weight: 600; }
+.result-label { color: var(--purple); font-size: 10px; font-weight: 700; letter-spacing: 1.2px; margin: 0 0 8px; }
+.result-title { margin: 0 0 12px; font: 700 17px Manrope, sans-serif; color: var(--ink); }
+.how-it-works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 23px 0 38px; }
+.how-it-works > div { background: rgba(255,255,255,.7); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+.how-it-works > div { cursor: pointer; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.how-it-works > div:hover { transform: translateY(-4px); border-color: #a99aff; box-shadow: 0 10px 25px rgba(107, 78, 255, .12); }
+.how-it-works > div:hover .feature-icon { display: inline-block; transform: scale(1.2) rotate(-8deg); }
+.feature-icon { transition: transform .2s; }
+.feature-icon { font-size: 21px; }
+.how-it-works h3 { font: 700 14px Manrope, sans-serif; margin: 10px 0 5px; }
+.how-it-works p { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 0; }
+footer { border-top: 1px solid var(--border); text-align: center; padding: 20px 0 30px; color: #9693a8; font-size: 11px; }
+@media (max-width: 760px) {
+  .topbar { padding: 0 5%; }
+  .tagline { display: none; }
+  .hero { padding: 38px 0 27px; }
+  .workspace { grid-template-columns: 1fr; }
+  .panel { padding: 19px; }
+  .how-it-works { grid-template-columns: 1fr; }
+  .input-footer { flex-direction: column; }
+}
